@@ -1,0 +1,27 @@
+:root {
+    --sunrise: 270deg;
+    --sunset: 160deg;
+
+    --dayColor1: hsl(59, 99%, 73%);
+    --dayColor2: hsl(56, 77%, 79%);
+    --nightColor1: hsl(240, 40%, 18%);
+    --nightColor2: hsl(204, 56%, 9%);
+    --twilightColor1: #fea367;
+    --twilightColor2: #cf7951;
+}
+
+#terra {
+    width: 50vmin;
+    height: 50vmin;
+    /* rotate: 270deg; */
+    border-radius: 100%;
+    margin: 0 auto;
+    
+    background: conic-gradient(
+        from 270deg, 
+        var(--twilightColor2) 0deg, var(--twilightColor1) 8deg,
+        var(--dayColor1) 8deg, var(--dayColor2), var(--dayColor1) 180deg, 
+        var(--twilightColor1) 180deg, var(--twilightColor2) 188deg,
+        var(--nightColor1) 188deg, var(--nightColor2), var(--nightColor1) 360deg
+    );
+}
